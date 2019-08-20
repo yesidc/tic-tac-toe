@@ -1,0 +1,127 @@
+#container{
+    
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: repeat(3,80px);
+    grid-gap: 5px;
+    width: 100px;
+    
+    margin: 0 auto;
+    
+  
+}
+.block { 
+   
+    background: gold;
+   
+}
+
+
+@media screen and (max-width: 430px) {
+    #container{
+        width:200px;
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 630px) {
+   #container{
+        width:400px;
+    }
+}
+@media screen and (min-width: 631px) and (max-width: 830px) {
+   #container{
+        width:600px;
+    }
+}
+@media screen and (min-width: 831px) and (max-width: 1030px) {
+   #container{
+        width:800px;
+    }
+}
+
+
+
+
+h1{
+  text-align: center;
+}
+
+
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "article article article";
+  grid-template-rows: 80px 1fr;  
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+header, article, div {
+  padding: 1.2em;
+  background: rgb(241, 238, 219);
+  }
+#pageHeader {
+  grid-area: header;
+  }
+#mainArticle { 
+  grid-area: article;  
+   
+ 
+  }
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+
+#wrapperBtn{
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+}
+.btn{
+  border: 2px solid #4CAF50; /* Green */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.btnRight{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.btnPlayAgainst{
+  background-color: #f44336;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  opacity: 0.6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+.btnPlayAgainst:hover{
+  opacity: 1;
+  }
+h1{
+  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
